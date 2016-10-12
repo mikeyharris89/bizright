@@ -13,6 +13,8 @@
 .header-hero .header-search .form-group {
   padding-left: 10px;
   padding-right: 10px;
+  margin: 0 auto;
+  height: auto;
 }
 
 .header-hero .header-search .input-lg,
@@ -154,7 +156,76 @@
   }
 }
 
-.bullet-one {
-  left: -900px;
+.bullet:first-child{
   position: relative;
+  animation: slide-right 1.75s;
+  visibility: hidden;
+  animation-fill-mode: forwards;
+}
+.bullet:nth-child(2) {
+  position: relative;
+  animation: slide-right 1.75s 1.75s;
+  visibility: hidden;
+  animation-fill-mode: forwards;
+}
+
+.heading-1 {
+  position: relative;
+  animation: slide-off 1s 4s;
+  animation-fill-mode:forwards;
+
+}
+
+.heading-2{
+  position: relative;
+  animation: slide-right 1.75s 7s;
+  animation-fill-mode:forwards;
+
+}
+
+.btn-cta {
+  background: white;
+  border: 4px solid red;
+  border-radius: 30px;
+  -webkit-box-shadow: none;
+  color: #000;
+  opacity: 0;
+  animation: fade-in 1s 6s;
+  animation-fill-mode:forwards;
+
+}
+
+@keyframes slide-right{
+  0% {
+    display: block !important;
+    visibility: visible;
+    right: 100%;
+  }
+
+  100% {
+    right: 0%;
+    visibility: visible;
+
+  }
+}
+
+@keyframes slide-off{
+  0% {
+    visibility: visible;
+    left: 0%;
+  }
+
+  100% {
+    left: 100%;
+  }
+}
+
+@keyframes fade-in{
+  0% {
+    opacity: 0;
+  }
+
+  100%{
+    opacity: 1;
+  }
 }
