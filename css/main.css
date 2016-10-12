@@ -164,7 +164,7 @@
 }
 .bullet:nth-child(2) {
   position: relative;
-  animation: slide-right 1.75s 1.75s;
+  animation: slide-right 1.75s 1.25s;
   visibility: hidden;
   animation-fill-mode: forwards;
 }
@@ -173,12 +173,12 @@
   position: relative;
   animation: slide-off 1s 4s;
   animation-fill-mode:forwards;
-
 }
 
 .heading-2{
   position: relative;
-  animation: slide-right 1.75s 7s;
+  right: 100%;
+  animation: slide-right 1.75s 5s;
   animation-fill-mode:forwards;
 
 }
@@ -190,14 +190,13 @@
   -webkit-box-shadow: none;
   color: #000;
   opacity: 0;
-  animation: fade-in 1s 6s;
+  animation: fade-in 1.5s 5s;
   animation-fill-mode:forwards;
 
 }
 
 @keyframes slide-right{
   0% {
-    display: block !important;
     visibility: visible;
     right: 100%;
   }
@@ -223,9 +222,11 @@
 @keyframes fade-in{
   0% {
     opacity: 0;
+    visibility: visible;
   }
 
   100%{
     opacity: 1;
+    visibility: visible;
   }
 }
