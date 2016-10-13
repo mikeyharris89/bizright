@@ -147,14 +147,11 @@
 .form-control {
     border-radius: 0;
     border: 0;
-    -webkit-box-shadow: 0 4px 1px -1px #38AC9E;
-    -moz-box-shadow: 0 4px 1px -1px #38AC9E;
-    -ms-box-shadow: 0 4px 1px -1px #38AC9E;
-    box-shadow: 0 4px 1px -1px #38AC9E;
     -webkit-transition: all 500ms;
     -moz-transition: all 500ms;
     -ms-transition: all 500ms;
     transition: all 500ms;
+    background: grey;
 }
 
 .form-control:focus {

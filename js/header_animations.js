@@ -3,7 +3,8 @@
   var $ctaButton = $('button.btn-cta');
   var changeText = function() {
     $('.bullet:first-child').text("That's Why You Need Your");
-    $('.bullet:last-child').text("Free Business Credit Score");
+    $underline = $('<div>').addClass('underline');
+    $('.bullet:last-child').text("Free Business Credit Score").append($underline);
   }
   window.setTimeout(function(){
     changeText();
@@ -14,8 +15,11 @@
   })
 
   var addBox = function() {
-    $('.bullet:first-child').text("Great You're On the right track");
-    $('.bullet:last-child').text("Just a few questions");
+    $firstBullet = $('.bullet:first-child').text("Great You're now on the right track!");
+    $underline = $('<div>').addClass('underline');
+    $firstBullet.append($underline);
+    $('.bullet:last-child').text("Just a few questions..");
+    $('.heading-1').addClass('new-heading');
     $('button.btn-cta').remove()
     var $infoBox = $('<div>').addClass('info-box'),
         $instruction = $('<p>').text("Step One: Choose Your Business"),
