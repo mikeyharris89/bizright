@@ -158,30 +158,29 @@
 
 .bullet:first-child{
   position: relative;
-  animation: slide-right 1.75s;
+  animation: slide-right 1.75s, slide-off 1s 3s, slide-back 1.5s 4s;
   visibility: hidden;
   animation-fill-mode: forwards;
 }
 .bullet:nth-child(2) {
   position: relative;
-  animation: slide-right 1.75s 1.25s;
+  animation: slide-right 1.75s .5s, slide-off 1s 3s, slide-back 1.5s 4.5s;
   visibility: hidden;
   animation-fill-mode: forwards;
 }
 
-.heading-1 {
+/*.heading-1 {
   position: relative;
-  animation: slide-off 1s 4s;
+  animation: slide-off 1s 4s, slide-back 1.75s 4.25s;
   animation-fill-mode:forwards;
-}
+}*/
 
-.heading-2{
+/*.heading-2{
   position: relative;
   right: 100%;
   animation: slide-right 1.75s 5s;
   animation-fill-mode:forwards;
-
-}
+}*/
 
 .btn-cta {
   background: white;
@@ -204,18 +203,38 @@
   100% {
     right: 0%;
     visibility: visible;
-
   }
 }
 
+@keyframes slide-back {
+  0% {
+    right: 100%;
+    visibility: visible;
+  }
+
+  100% {
+    right: 0%;
+    visibility: visible;
+  }
+}
 @keyframes slide-off{
   0% {
     visibility: visible;
     left: 0%;
   }
 
+  98% {
+    left: 200%;
+    visibility: hidden;
+  }
+
+  99% {
+    visibility: hidden;
+    left: 0%
+  }
   100% {
-    left: 100%;
+    visibility: hidden;
+    right: 100%;
   }
 }
 
