@@ -107,9 +107,11 @@
     padding: 15px 0;
 }
 
-.navbar .navbar-header .navbar-brand .img-logo {
+.navbar .navbar-header  .img-logo {
+  /*.navbar-brand*/
+  margin-top: 15px;
     width: 180px;
-    height: 33.75px;
+    /*height: 33.75px;*/
 }
 
 .navbar .navbar-collapse {
@@ -196,7 +198,6 @@
 /* footer */
 
 .footer {
-    background-color: red;
     text-align: center;
 }
 
@@ -289,4 +290,20 @@
   .footer .social-icons .img-icon {
     width: auto;
   }
+}
+
+.content-section {
+  background: #FF5A58;
+}
+
+.content-section h2 {
+  text-align: center;
+
+  margin-bottom: 50px;
+}
+.test1, .test2, .test3 {
+  background: #8C001A;
+  margin-right: 15px;
+  color: white;
+  height: 200px;
 }

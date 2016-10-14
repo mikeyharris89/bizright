@@ -5,10 +5,12 @@
     $('.bullet:first-child').text("That's Why You Need Your");
     $underline = $('<div>').addClass('underline');
     $('.bullet:last-child').text("Free Business Credit Score").append($underline);
+    $('.heading-1').fadeIn("slow");
   }
   window.setTimeout(function(){
+    $('.heading-1').css({display: "none"});
     changeText();
-  }, 4000)
+  }, 2500)
   $ctaButton.click(function (e) {
     e.preventDefault();
     addBox();
@@ -19,7 +21,8 @@
     $underline = $('<div>').addClass('underline');
     $firstBullet.append($underline);
     $('.bullet:last-child').text("Just a few questions..");
-    $('.heading-1').addClass('new-heading');
+    // $('.heading-1').removeClass("heading-1").addClass('new-heading');
+    $('.heading-1').css({display: "none"}).fadeIn("slow");;
     $('button.btn-cta').remove()
     var $infoBox = $('<div>').addClass('info-box'),
         $instruction = $('<p>').text("Step One: Choose Your Business"),
@@ -36,11 +39,12 @@
   }
 
   var updateBox = function($instruction, $nextButton, $input, e) {
-    $instruction.text("Where dat business at");
+    $instruction.text("Where dat business at").addClass('box-header');
     $input.remove();
     $stateBar = $('select#state');
 
-    $('.info-box').append($stateBar.show());
+    $stateBar.insertAfter('.box-header');
+    $stateBar.css({display:"block"});
     $nextButton.text("See The Score");
   }
 

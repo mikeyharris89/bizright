@@ -156,7 +156,7 @@
   }
 }
 
-.bullet:first-child{
+/*.bullet:first-child{
   position: relative;
   animation: slide-right 1.75s, slide-off 1s 3s, slide-back 1.5s 4s;
   visibility: hidden;
@@ -167,18 +167,24 @@
   animation: slide-right 1.75s .5s, slide-off 1s 3s, slide-back 1.5s 4.5s;
   visibility: hidden;
   animation-fill-mode: forwards;
+}*/
+
+.heading-1{
+  position: relative;
+  animation: fade-up 1.5s;
+  animation-fill-mode:forwards;
+  display: inline-block;
+  margin-bottom: 50px;
 }
-
-
 
 .btn-cta {
   background: white;
-  border: 4px solid red;
+  border: 4px solid #FF5A58;
   border-radius: 30px;
   -webkit-box-shadow: none;
   color: #000;
   opacity: 0;
-  animation: fade-in 1.5s 5s;
+  animation: fade-in 2s 5s;
   animation-fill-mode:forwards;
 
 }
@@ -211,7 +217,6 @@
     visibility: visible;
     left: 0%;
   }
-
   98% {
     left: 200%;
     visibility: hidden;
@@ -241,44 +246,20 @@
 
 @keyframes fade-up{
   0% {
+    visibility: hidden;
     opacity: 0;
-    top: 0;
+    top: 20px;
 
   }
 
   100% {
+    visibility: visible;
     opacity: 1;
-    top: 10px;
+    top: 0px;
   }
 }
 
-@keyframes border{
-  0%{
-    border: 4px transparent red;
 
-  }
-
-  25% {
-    border-top: 4px solid red;
-
-  }
-  50%{
-    border-top: 4px solid red;
-    border-right: 4px solid red;
-  }
-  75%{
-    border-top: 4px solid red;
-    border-right: 4px solid red;
-    border-bottom: 4px solid red;
-
-  }
-  100%{
-    border-top: 4px solid red;
-    border-right: 4px solid red;
-    border-bottom: 4px solid red;
-    border-left: 4px solid red;
-  }
-}
 @keyframes fade-down{
   0% {
     visibility: visible;
@@ -297,24 +278,23 @@
     width: 0;
   }
   100%{
-    background: red;
+    background: #FF5A58;
     width: 65px;
   }
 }
 
 .info-box {
   position: relative;
-  border: 4px transparent red;
-  animation: fade-up 1s, border 3s;
+  border: 4px solid #FF5A58;
+  animation: fade-up 1s;
   animation-fill-mode: forwards;
   padding: 10px;
 }
 .new-heading {
   position: relative;
   display: inline-block;
-  visibility: hidden;
-  top: -30px;
-  animation: fade-down 1s;
+  /*visibility: hidden;*/
+  animation: fade-up 1s;
   animation-fill-mode: forwards;
 
 }
@@ -324,7 +304,7 @@
   left: 2px;
   height: 5px;
   width: 0;
-  animation: underline .5s .5s;
+  animation: underline 1.25s 1s;
   animation-fill-mode: forwards;
   -ms-transform: rotate(-5deg);
   -webkit-transform: rotate(-5deg);
@@ -336,4 +316,33 @@
   top: -100px;
   animation: fade-down 1s;
   animation-fill-mode: forwards;
+}
+
+.top {
+  stroke-dasharray: 2000;
+  stroke-dashoffset: 2000;
+  animation: dash 1.5s linear forwards;
+}
+
+.right {
+  stroke-dasharray: 2000;
+  stroke-dashoffset: 2000;
+  animation: dash 1.5s 0.8s linear forwards;
+}
+
+.bottom {
+  stroke-dasharray: 2000;
+  stroke-dashoffset: 2000;
+  animation: dash 1.5s 1s linear forwards;
+}
+
+.left {
+  stroke-dasharray: 2000;
+  stroke-dashoffset: 2000;
+  animation: dash 1.5s 1.8s linear forwards;
+}
+@keyframes dash{
+  to {
+    stroke-dashoffset: 0;
+  }
 }
