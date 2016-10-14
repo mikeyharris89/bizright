@@ -110,7 +110,8 @@
 .navbar .navbar-header  .img-logo {
   /*.navbar-brand*/
   margin-top: 15px;
-    width: 180px;
+  width: 180px;
+  position: relative;
     /*height: 33.75px;*/
 }
 
