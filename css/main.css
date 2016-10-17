@@ -21,8 +21,12 @@
 .header-hero .header-search .btn-lg {
   height: 60px;
   font-size: 22px;
+
 }
 
+.input-lg {
+  width: 300px;
+}
 .header-hero .header-search input.error {
   -webkit-box-shadow: 0 4px 1px -1px #EF2742;
   -moz-box-shadow: 0 4px 1px -1px #EF2742;
@@ -171,7 +175,7 @@
   -webkit-box-shadow: none;
   color: #000;
   opacity: 0;
-  animation: fade-in 2s 5s;
+  animation: fade-in 3s 1.75s;
   animation-fill-mode:forwards;
 
 }
@@ -362,4 +366,7 @@
   to {
     stroke-dashoffset: 0;
   }
+}
+.search-bar, .search-input, .btn-search {
+  height: 46px;
 }
