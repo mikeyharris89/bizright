@@ -1,5 +1,8 @@
 /* header-hero */
 
+.header-hero {
+  padding-bottom: 30px;
+}
 .header-hero .img-logo {
   display: block;
   width: 80px;
@@ -24,9 +27,6 @@
 
 }
 
-.input-lg {
-  width: 300px;
-}
 .header-hero .header-search input.error {
   -webkit-box-shadow: 0 4px 1px -1px #EF2742;
   -moz-box-shadow: 0 4px 1px -1px #EF2742;
@@ -175,7 +175,9 @@
   -webkit-box-shadow: none;
   color: #000;
   opacity: 0;
-  animation: fade-in 3s 1.75s;
+  width: 300px;
+  margin: auto;
+  animation: fade-in 3s 2.5s;
   animation-fill-mode:forwards;
 
 }
@@ -367,6 +369,6 @@
     stroke-dashoffset: 0;
   }
 }
-.search-bar, .search-input, .btn-search {
+.search-bar, .search-input, .btn-search, #state {
   height: 46px;
 }
